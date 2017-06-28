@@ -11,13 +11,19 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblHelloWorld: UILabel!
-    var timer: Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector("setRandomBackgroundColor"), userInfo: nil, repeats: true)
-        self.setRandomBackgroundColor()
+
+        print("Hello World")
     }
+
+
+    @IBAction func ChangeColor(__sender: Any) {
+        self.lblHelloWorld.textColor = UIColor.red;
+
+    }
+
 
     func setRandomBackgroundColor() {
         let colors = [
@@ -31,11 +37,36 @@ class ViewController: UIViewController {
         self.lblHelloWorld.textColor = colors[randomColor]
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 
